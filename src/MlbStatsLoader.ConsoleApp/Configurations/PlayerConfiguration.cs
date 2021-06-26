@@ -14,6 +14,7 @@ namespace MlbStatsLoader.ConsoleApp.Configurations
             builder.Property(c => c.Name).IsRequired().HasColumnName("Name").HasColumnType("nvarchar(255)");
             builder.Property(c => c.TeamId).IsRequired().HasColumnName("TeamId").HasColumnType("int");
             builder.Property(c => c.Url).IsRequired().HasColumnName("Url").HasColumnType("nvarchar(255)").HasMaxLength(255);
+            builder.Property(c => c.IsPitcher).IsRequired().HasColumnName("IsPitcher").HasColumnType("bit");
         }
     }
 }

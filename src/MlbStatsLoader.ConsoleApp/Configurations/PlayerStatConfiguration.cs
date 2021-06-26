@@ -23,6 +23,7 @@ namespace MlbStatsLoader.ConsoleApp.Configurations
             builder.Property(c => c.Strikeouts).IsRequired().HasColumnName("StrikeOuts").HasColumnType("int");
             builder.Property(c => c.Walks).IsRequired().HasColumnName("Walks").HasColumnType("int");
             builder.Property(c => c.GameDate).IsRequired().HasColumnName("GameDate").HasColumnType("date");
+            builder.Property(c => c.TeamId).IsRequired().HasColumnName("TeamId").HasColumnType("int");
         }
     }
 }

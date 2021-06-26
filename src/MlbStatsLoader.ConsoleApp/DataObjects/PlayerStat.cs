@@ -17,6 +17,7 @@ namespace MlbStatsLoader.ConsoleApp.DataObjects
         public double Slg { get; set; }
         public int OpponentId { get; set; }
         public DateTime GameDate { get; set; }
+        public int TeamId { get; set; }
 
     }
 }

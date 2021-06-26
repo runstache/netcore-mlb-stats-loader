@@ -6,5 +6,6 @@
         public string Url { get; set; }
         public string Name { get; set; }
         public int TeamId { get; set; }
+        public bool IsPitcher { get; set; }
     }
 }

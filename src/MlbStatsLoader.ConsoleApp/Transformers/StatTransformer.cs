@@ -6,7 +6,7 @@ namespace MlbStatsLoader.ConsoleApp.Transformers
 {
     public class StatTransformer
     {
-        public static PlayerStat Transform(PlayerStatModel model, long playerId, int opponentId, string gameDate)
+        public static PlayerStat Transform(PlayerStatModel model, long playerId, int opponentId, int teamId, string gameDate)
         {
             return new PlayerStat()
             {
@@ -21,11 +21,12 @@ namespace MlbStatsLoader.ConsoleApp.Transformers
                 Slg = ConvertDouble(model.Slg),
                 Strikeouts = ConvertInteger(model.Strikeouts),
                 Walks = ConvertInteger(model.Walks),
-                GameDate = ConvertDateTime(gameDate)
+                GameDate = ConvertDateTime(gameDate),
+                TeamId = teamId
             };
         }
 
-        public static PitcherStat Transform(PitcherStatModel model, long playerId, int opponentId, string gameDate)
+        public static PitcherStat Transform(PitcherStatModel model, long playerId, int opponentId, int teamId, string gameDate)
         {
             string[] parts = model.Pcst.Split("-");
             return new PitcherStat()
@@ -42,7 +43,8 @@ namespace MlbStatsLoader.ConsoleApp.Transformers
                 Runs = ConvertInteger(model.Runs),
                 Strikeouts = ConvertInteger(model.Strikeouts),
                 Walks = ConvertInteger(model.Walks),
-                GameDate = ConvertDateTime(gameDate)
+                GameDate = ConvertDateTime(gameDate),
+                TeamId = teamId
             };
 
         }

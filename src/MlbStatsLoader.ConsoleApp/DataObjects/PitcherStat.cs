@@ -18,5 +18,6 @@ namespace MlbStatsLoader.ConsoleApp.DataObjects
         public int PitchesForStrikes { get; set; }
         public double EarnedRunAverage { get; set; }
         public DateTime GameDate { get; set; }
+        public int TeamId { get; set; }
     }
 }

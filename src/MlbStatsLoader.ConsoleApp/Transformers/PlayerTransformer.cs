@@ -11,7 +11,8 @@ namespace MlbStatsLoader.ConsoleApp.Transformers
             {
                 Name = stat.Name,
                 Url = stat.Url,
-                TeamId = teamId
+                TeamId = teamId,
+                IsPitcher = false
             };
         }
 
@@ -21,7 +22,8 @@ namespace MlbStatsLoader.ConsoleApp.Transformers
             {
                 Name = stat.Name,
                 Url = stat.Url,
-                TeamId = teamId
+                TeamId = teamId,
+                IsPitcher = true
             };
         }
     }

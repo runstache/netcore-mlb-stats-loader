@@ -114,7 +114,7 @@ namespace MlbStatsLoader.ConsoleApp
                                                 player = repo.Insert(player);
                                             }
 
-                                            var stat = StatTransformer.Transform(statmodel, player.Id, homeTeam.Id, model.GameDate);
+                                            var stat = StatTransformer.Transform(statmodel, player.Id, homeTeam.Id, awayTeam.Id, model.GameDate);
                                             repo.Insert(stat);
 
                                         }
@@ -135,7 +135,7 @@ namespace MlbStatsLoader.ConsoleApp
                                             {
                                                 player = repo.Insert(player);
                                             }
-                                            var stat = StatTransformer.Transform(statmodel, player.Id, homeTeam.Id, model.GameDate);
+                                            var stat = StatTransformer.Transform(statmodel, player.Id, homeTeam.Id, awayTeam.Id, model.GameDate);
                                             repo.Insert(stat);
                                         }
                                     }
@@ -156,7 +156,7 @@ namespace MlbStatsLoader.ConsoleApp
                                                 player = repo.Insert(player);
                                             }
 
-                                            var stat = StatTransformer.Transform(statmodel, player.Id, awayTeam.Id, model.GameDate);
+                                            var stat = StatTransformer.Transform(statmodel, player.Id, awayTeam.Id, homeTeam.Id, model.GameDate);
                                         }
                                     }
 
@@ -175,7 +175,7 @@ namespace MlbStatsLoader.ConsoleApp
                                             {
                                                 player = repo.Insert(player);
                                             }
-                                            var stat = StatTransformer.Transform(statmodel, player.Id, awayTeam.Id, model.GameDate);
+                                            var stat = StatTransformer.Transform(statmodel, player.Id, awayTeam.Id,homeTeam.Id, model.GameDate);
                                         }
                                     }
                                 }
