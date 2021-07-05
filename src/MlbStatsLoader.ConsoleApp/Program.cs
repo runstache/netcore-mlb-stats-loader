@@ -157,6 +157,7 @@ namespace MlbStatsLoader.ConsoleApp
                                             }
 
                                             var stat = StatTransformer.Transform(statmodel, player.Id, awayTeam.Id, homeTeam.Id, model.GameDate);
+                                            repo.Insert(stat);
                                         }
                                     }
 
@@ -176,6 +177,7 @@ namespace MlbStatsLoader.ConsoleApp
                                                 player = repo.Insert(player);
                                             }
                                             var stat = StatTransformer.Transform(statmodel, player.Id, awayTeam.Id,homeTeam.Id, model.GameDate);
+                                            repo.Insert(stat);
                                         }
                                     }
                                 }
